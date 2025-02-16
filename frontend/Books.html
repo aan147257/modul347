@@ -1,169 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>MuggleMedia</title>
-        <link rel="stylesheet" href="./css/StyleSheet.css">
-    </head>
-    <body>
-        <div style="padding-bottom: 70px;">
-            <nav>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/Movies.html">Movie</a></li>
-                <li><a href="/Shows.html">Show</a></li>
-                <li><a href="/Music.html">Music</a></li>
-                <li class="currentPage"><a href="#">Books</a></li>
-            </nav>
-        </div>
-        <h1>Currently trending Books</h1>
+<head>
+    <meta content="text/html; charset=utf-8" />
+    <title>MuggleMedia</title>
+    <link rel="stylesheet" href="./css/StyleSheet.css">
+</head>
+<body>
+<div style="padding-bottom: 70px;">
+    <nav>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/Movies.html">Movie</a></li>
+            <li><a href="/Shows.html">Show</a></li>
+            <li><a href="/Music.html">Music</a></li>
+            <li class="currentPage"><a href="#">Books</a></li>
+    </nav>
+</div>
+<h1>Currently Trending Books</h1>
 
-        <!--Tabellen Inhalt wurde von ChatGPT geniriert-->
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Description</th>
+        <th>Release</th>
+    </tr>
+    </thead>
+    <tbody id="booksTable">
+    <tr>
+        <td>1</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Covenant-of-Water.jpg" alt="The Covenant of Water" width="100"></td>
+        <td>The Covenant of Water</td>
+        <td>Abraham Verghese</td>
+        <td>A sweeping family saga set in South India.</td>
+        <td>May 2, 2024</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/en/d/dd/Fourth_Wing_Cover_Art.jpeg" alt="Fourth Wing" width="100"></td>
+        <td>Fourth Wing</td>
+        <td>Rebecca Yarros</td>
+        <td>An epic fantasy novel filled with dragons and intrigue.</td>
+        <td>April 1, 2024</td>
+    </tr>
+    </tbody>
+</table>
 
-        <table>
-            <tr>
-                <th>#</th>
-                <th>Image</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Description</th>
-                <th>Details</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Covenant-of-Water.jpg " alt="The Covenant of Water" width="100"></td>
-                <td>The Covenant of Water</td>
-                <td>Abraham Verghese</td>
-                <td>A sweeping family saga set in South India.</td>
-                <td>Release: May 2, 2024</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/d/dd/Fourth_Wing_Cover_Art.jpeg" alt="Fourth Wing" width="100"></td>
-                <td>Fourth Wing</td>
-                <td>Rebecca Yarros</td>
-                <td>An epic fantasy novel filled with dragons and intrigue.</td>
-                <td>Release: April 1, 2024</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/6/67/Happy_Place_%28novel%29.jpg" alt="Happy Place" width="100"></td>
-                <td>Happy Place</td>
-                <td>Emily Henry</td>
-                <td>A romantic comedy about reconnecting with lost love.</td>
-                <td>Release: April 25, 2024</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Lessons_in_Chemistry_cover.jpg" alt="Lessons in Chemistry" width="100"></td>
-                <td>Lessons in Chemistry</td>
-                <td>Bonnie Garmus</td>
-                <td>A quirky and empowering story of a woman scientist in the 1960s.</td>
-                <td>Release: April 5, 2024</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/6/69/Spare_cover.jpg" alt="Spare" width="100"></td>
-                <td>Spare</td>
-                <td>Prince Harry</td>
-                <td>Prince Harry's candid and revealing memoir.</td>
-                <td>Release: January 10, 2024</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Tomorrow%2C_and_Tomorrow%2C_and_Tomorrow.jpg" alt="Tommorrow, and Tomorrow, and Tomorrow" width="100"></td>
-                <td>Tommorrow, and Tomorrow, and Tomorrow</td>
-                <td>Gabrielle Zevin</td>
-                <td>A heartfelt tale of friendship and creativity spanning decades.</td>
-                <td>Release: July 12, 2024</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/6/6e/Demon_Copperhead_%28Barbara_Kingsolver%29.png" alt="Demon Copperhead" width="100"></td>
-                <td>Demon Copperhead</td>
-                <td>Barbara Kingsolver</td>
-                <td>A modern retelling of David Copperfield set in Appalachia.</td>
-                <td>Release: October 18, 2024</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/en/e/ee/The-wager-david-grann-bookcover.jpg" alt="The Wager" width="100"></td>
-                <td>The Wager</td>
-                <td>David Grann</td>
-                <td>A gripping tale of survival and mutiny on the high seas.</td>
-                <td>Release: April 18, 2024</td>
-            </tr>
-        </table>
-        <div class="container">
-            <h2>Add a New Book</h2>
-            <form id="addBookForm">
-                <input type="text" id="title" placeholder="Title" required>
-                <input type="text" id="author" placeholder="Author" required>
-                <textarea id="description" placeholder="Description" required></textarea>
-                <input type="date" id="releaseDate" required>
-                <button type="submit">Add Book</button>
-            </form>
-        </div>
+<div class="container">
+    <h2>Add a New Book</h2>
+    <form id="addBookForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <input type="date" id="releaseDate" required>
+        <button type="submit">Add Book</button>
+    </form>
+</div>
 
-        <script>
-            function fetchBooks() {
-                fetch('/api/books')
-                    .then(response => response.json())
-                    .then(books => {
-                        const tableBody = document.getElementById('booksTable');
-                        tableBody.innerHTML = books.map((book, index) => `
-                        <tr>
-                            <td>${index + 1}</td>
+<script>
+    function fetchBooks() {
+        fetch("/api/books")
+            .then(response => response.json())
+            .then(books => {
+                const tableBody = document.getElementById('booksTable');
+                books.forEach((book) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                            <td>${tableBody.children.length + 1}</td>
                             <td><img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="${book.title}" width="100"></td>
                             <td>${book.title}</td>
                             <td>${book.author}</td>
                             <td>${book.description}</td>
-                            <td>${book.release_date}</td>
-                        </tr>
-                    `).join('');
-                    })
-                    .catch(error => console.error('Error loading books:', error));
-            }
+                            <td>${new Date(book.release_date).toLocaleDateString()}</td>
+                        `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error loading books:', error));
+    }
 
-            document.getElementById('addBookForm').addEventListener('submit', function(e) {
-                e.preventDefault();
+    document.getElementById('addBookForm').addEventListener('submit', function(e) {
+        e.preventDefault();
 
-                const title = document.getElementById('title').value;
-                const author = document.getElementById('author').value;
-                const description = document.getElementById('description').value;
-                const releaseDate = document.getElementById('releaseDate').value;
+        const title = document.getElementById('title').value;
+        const author = document.getElementById('author').value;
+        const description = document.getElementById('description').value;
+        const releaseDate = document.getElementById('releaseDate').value;
 
-                if (!title || !author || !description || !releaseDate) {
-                    alert('Please fill in all fields.');
-                    return;
-                }
+        if (!title || !author || !description || !releaseDate) {
+            alert('Please fill in all fields.');
+            return;
+        }
 
-                const book = { title, author, description, release_date: releaseDate };
+        const book = { title, author, description, release_date: releaseDate };
 
-                fetch('/api/books', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(book)
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log('Success:', data);
-                        fetchBooks(); // Reload book list
-                        document.getElementById('addBookForm').reset();
-                    })
-                    .catch(error => console.error('Error:', error));
-            });
+        fetch('/api/books', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(book)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                fetchBooks();
+                document.getElementById('addBookForm').reset();
+            })
+            .catch(error => console.error('Error:', error));
+    });
 
-            fetchBooks();
-        </script>
-        <br>
-        <hr>
-        <br>
-        <footer>
-            <p>&copy; 2024 MuggleMedia. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            <p>Contact us at: <a href="mailto:contact@urfavs.com">contact@MuggleMedia.com</a></p>
-        </footer>
-    </body>
+    fetchBooks();
+</script>
+
+<footer>
+    <p>&copy; 2024 MuggleMedia. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <p>Contact us at: <a href="mailto:contact@MuggleMedia.com">contact@MuggleMedia.com</a></p>
+</footer>
+</body>
 </html>
-
-
-

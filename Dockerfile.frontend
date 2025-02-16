@@ -1,15 +1,11 @@
 # Dockerfile for the frontend
 FROM nginx:alpine
 
-# Copy the entire frontend directory to the Nginx web root
 WORKDIR /usr/share/nginx/html
 COPY ./frontend /usr/share/nginx/html
 
-# Copy the Nginx configuration file
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 80 for Nginx
 EXPOSE 80
 
-# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
