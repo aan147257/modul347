@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-init-script
+data:
+  init.sql: |
+    CREATE DATABASE IF NOT EXISTS mugglemedia;
+    USE mugglemedia;
+
+    CREATE TABLE IF NOT EXISTS books (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        author VARCHAR(255) NOT NULL,
+        description TEXT,
+        release_date DATE
+    );
+
+    CREATE TABLE IF NOT EXISTS movies (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        director VARCHAR(255) NOT NULL,
+        description TEXT,
+        release_date DATE
+    );
+
+    CREATE TABLE IF NOT EXISTS music (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        artist VARCHAR(255) NOT NULL,
+        description TEXT,
+        album VARCHAR(255)
+    );
+
+    CREATE TABLE IF NOT EXISTS shows (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        creator VARCHAR(255) NOT NULL,
+        description TEXT,
+        release_date DATE
+    );
